@@ -76,7 +76,8 @@ body {
 }
 
 .auth-box {
-    width: 420px;
+    width: 90%;
+    max-width: 420px;
     padding: 32px;
     background-color: var(--white);
     border-radius: var(--radius);
@@ -438,6 +439,51 @@ body {
     .message {
         max-width: 85%;
     }
+    
+    .auth-box {
+        width: 90%;
+    }
+    
+    .input-container {
+        padding: 8px;
+    }
+    
+    .message-input {
+        font-size: 14px;
+    }
+    
+    .send-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 8px 16px;
+    }
+    
+    .user-info span {
+        font-size: 14px;
+    }
+    
+    .message-content {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+    
+    .message-meta {
+        font-size: 10px;
+    }
+    
+    .no-chat-selected {
+        font-size: 14px;
+    }
+    
+    .no-chat-selected::before {
+        font-size: 36px;
+    }
 }
 
 /* Scrollbar styles */
@@ -458,7 +504,7 @@ body {
 ::-webkit-scrollbar-thumb:hover {
     background-color: rgba(0, 0, 0, 0.2);
 }
-/* Add these styles to your existing CSS */
+
 /* General audio player styling */
 /* New audio element styling */
 audio {
@@ -519,44 +565,6 @@ audio::-webkit-media-controls-time-remaining-display {
 .message-content::after {
     display: none;
 }
-
-/* 
-.status-indicator {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    border: 2px solid var(--white);
-}
-
-.status-indicator.online {
-    background-color: #10b981;
-}
-
-.status-indicator.away {
-    background-color: #f59e0b;
-}
-
-.status-indicator.offline {
-    background-color: #6b7280;
-}
-
-.user-avatar-container {
-    position: relative;
-}
-
-.user-details {
-    display: flex;
-    flex-direction: column;
-}
-
-.last-seen {
-    font-size: 12px;
-    color: var(--light-text);
-}
-*/
     </style>
 </head>
 <body>
