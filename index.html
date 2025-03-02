@@ -565,6 +565,115 @@ audio::-webkit-media-controls-time-remaining-display {
 .message-content::after {
     display: none;
 }
+
+/* Better mobile responsiveness for users panel */
+@media (max-width: 768px) {
+    .users-panel {
+        width: 120px; /* Slightly wider than before */
+    }
+    
+    .user-item {
+        justify-content: center;
+        padding: 12px 8px;
+    }
+    
+    .user-item .user-avatar {
+        width: 40px;
+        height: 40px;
+    }
+    
+    /* Show at least initials on the user item */
+    .user-item span {
+        display: block;
+        font-size: 12px;
+        width: 100%;
+        text-align: center;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    
+    /* Fix message input area for mobile */
+    .input-container {
+        padding: 8px;
+        flex-wrap: wrap;
+    }
+    
+    .message-input {
+        flex: 1;
+        min-width: 0; /* Allow input to shrink properly */
+        font-size: 16px; /* Larger font for better mobile typing */
+    }
+}
+
+/* Specific fixes for very small screens */
+@media (max-width: 480px) {
+    .container {
+        height: 100vh;
+        width: 100%;
+    }
+    
+    .chat-container {
+        flex-direction: column;
+        height: calc(100vh - 53px); /* Adjust for header height */
+    }
+    
+    .users-panel {
+        width: 100%;
+        height: 70px;
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+    }
+    
+    .users-list {
+        display: flex;
+        overflow-x: auto;
+        padding: 8px;
+    }
+    
+    .user-item {
+        flex-direction: column;
+        margin-right: 8px;
+        width: 60px;
+        height: 60px;
+    }
+    
+    .user-item .user-avatar {
+        width: 32px;
+        height: 32px;
+        margin-bottom: 4px;
+    }
+    
+    .user-item span {
+        font-size: 10px;
+    }
+    
+    .chat-panel {
+        flex: 1;
+        height: calc(100% - 70px);
+    }
+    
+    .messages-container {
+        height: calc(100% - 60px);
+    }
+    
+    .input-container {
+        height: 60px;
+        padding: 8px;
+        gap: 8px;
+    }
+    
+    .message-input {
+        font-size: 16px;
+        padding: 8px 12px;
+    }
+    
+    .send-btn, #startRecordingBtn, #stopRecordingBtn {
+        width: 36px;
+        height: 36px;
+        font-size: 14px;
+    }
+}
     </style>
 </head>
 <body>
